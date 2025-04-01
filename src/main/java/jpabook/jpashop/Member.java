@@ -11,8 +11,8 @@ import lombok.Setter;
 @Setter
 public class Member {
 
-    @Id
-    @GeneratedValue
+    @Id // pk 선언
+    @GeneratedValue // 값 자동생성
     private Long id;
     private String username;
 }
