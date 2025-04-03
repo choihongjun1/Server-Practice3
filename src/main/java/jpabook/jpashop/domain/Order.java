@@ -17,7 +17,7 @@ public class Order {
     @Column(name = "order_id")
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY) // 다대일 지연로딩
+    @ManyToOne(fetch = FetchType.LAZY) // 다대일, 지연로딩
     @JoinColumn(name = "member_id") // member_id가 fk
     private Member member; // 주문 회원
 
@@ -29,9 +29,10 @@ public class Order {
     private Delivery delivery; // 배송정보
     private LocalDateTime orderDate; // 주문시간
 
-    @Enumerated(EnumType.STRING) // 속성이 enum 질때 DB에 저장할 방법 지정 (enum 문자열 이름)
+    @Enumerated(EnumType.STRING) // 속성이 enum 일때 DB에 저장할 방법 지정 (enum 문자열 이름으로 저잧)
     private OrderStatus status; // 주문상태 [ORDER, CANCEL]
 
+    // 연관관계 메소드
     public void setMember(Member member) {
         this.member = member;
         member.getOrders().add(this);

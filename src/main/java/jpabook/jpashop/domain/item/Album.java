@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@DiscriminatorValue("A") // ?
+@DiscriminatorValue("A") // 구분 컬럼 값 지정
 @Getter
 @Setter
 public class Album extends Item {

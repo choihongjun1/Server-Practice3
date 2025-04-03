@@ -18,6 +18,6 @@ public class Delivery {
     @Embedded
     private Address address;
 
-    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.STRING) // 속성이 enum 일때 DB에 저장할 방법 지정 (enum 문자열 이름으로 저장)
     private DeliveryStatus status; // ENUM [READY(준비), COMP(배송)]
 }
