@@ -3,6 +3,10 @@ package jpabook.jpashop.domain;
 import lombok.Getter;
 import lombok.Setter;
 import jakarta.persistence.*;
+import java.time.LocalDateTime;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "orders") // 테이블 이름 지정
