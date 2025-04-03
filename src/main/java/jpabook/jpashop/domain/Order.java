@@ -13,8 +13,8 @@ public class Order {
     @Column(name = "order_id")
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY) // 다대일,
-    @JoinColumn(name = "member_id") // fk가 member_id
+    @ManyToOne(fetch = FetchType.LAZY) // 다대일 ??
+    @JoinColumn(name = "member_id") // member_id가 fk
     private Member member; // 주문 회원
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL) // 일대다,
