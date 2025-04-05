@@ -15,7 +15,7 @@ import java.util.List;
 public class MemberService {
 
 //    @Autowired
-    MemberRepository memberRepository;
+    private final MemberRepository memberRepository;
 
     /**
      * 회원가입

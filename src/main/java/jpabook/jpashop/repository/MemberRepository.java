@@ -13,7 +13,7 @@ import java.util.List;
 public class MemberRepository {
 
 //    @PersistenceContext
-    private EntityManager em;
+    private final EntityManager em;
 
     public void save(Member member) {
         em.persist(member); // DB에 INSERT
