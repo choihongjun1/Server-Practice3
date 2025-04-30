@@ -27,6 +27,7 @@ public class OrderRepository {
         return em.find(Order.class, id);
     }
 
+    // JPQL
     public List<Order> findAll(OrderSearch orderSearch) {
 
         //language=JPQL
@@ -75,7 +76,7 @@ public class OrderRepository {
         return query.getResultList();
     }
 
-
+    // JPA Criteria
     public List<Order> findAllByCriteria(OrderSearch orderSearch) {
         // CriteriaBuilder 객체
         CriteriaBuilder cb = em.getCriteriaBuilder();
